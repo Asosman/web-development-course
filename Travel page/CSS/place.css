@@ -1,0 +1,84 @@
+body{
+    background: linear-gradient(70deg, rgb(22,23,22), rgb(35,45,50));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    position:relative;
+}
+#logo a{
+    color:rgb(41, 192, 226);
+    text-shadow:2px 2px 4px rgb(136, 208, 253);
+}
+header ul li a{
+    text-decoration: none;
+    color:rgb(1, 9, 10);
+    margin:12px;
+    color:rgb(41, 192, 226);
+    text-shadow:1px 1px 2px;
+    padding:12px;
+    font-size:20px;
+}
+header ul li a:hover{
+    background-color: rgba(41, 192, 226,0.5);
+    color:rgb(0, 6, 7);
+
+}
+#card li img{
+    height:310px;
+    width:280px;
+}
+#card {
+    width: 1200px;
+    margin:0 auto 20px auto;
+    padding-top:20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px 20px;
+}
+#card li:nth-of-type(3){
+    grid-column:1 / span 2;
+
+}
+#card li{
+    display:flex; 
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px ;
+    overflow:hidden;
+    width:100%;
+}
+#card li p{
+    font-size: 24px;
+}
+#card li a{
+    font-size: 24px;
+
+}
+#card li h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+#card li h2::first-letter{
+    text-transform: uppercase;
+    font-size: 36px;
+}
+.item-content{
+    display:flex;
+    flex-direction: column;
+    background-color:white;
+    justify-content: space-between;
+    align-items:flex-end;
+    padding:24px;
+}
+.action a{
+    text-decoration:20px;
+    color:rgb(100, 181, 154);  
+    padding:9px 12px;
+    border-radius:8px;
+}
+.action a:hover{
+    background-color:rgba(118, 241, 213, 0.5);
+}
+.action a::after{
+    content: '\27A4';
+    padding-left:5px;
+}

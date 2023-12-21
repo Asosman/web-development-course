@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/style/recommendation.css" />
+    <script src="script/app.js" defer></script>
+    <title>recommended</title>
+  </head>
+  <body>
+    <%- include('includes/header') %>  
+    <%- include('includes/side-drawer') %>
+    <main>
+      <h1>Recommended restaurants</h1>
+      <form action="/restaurant" method="GET">
+        <input type="hidden" value="<%= nextOrder %>" name="order">
+        <button> Change Order</button>
+      </form>
+      <% if (numberOfRestaurant === 0){%>
+        <p>
+          Unforturnatly, We have no recommended restaurant, you may start
+          recommmending!!!
+        </p>
+        <% } else {%>
+          <p>
+            Find Your next favourite restaurant with the help of our other users!
+      </p>
+      <p>We found <%= numberOfRestaurant %> restuarant</p>
+      <% for (const hotel of hotels){%>
+        <%- include('includes/restore/rest.ejs', {hotel:hotel}) %>
+      <% } %>
+       <% } %>
+    </main>
+  </body>
+</html>

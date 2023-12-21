@@ -1,0 +1,78 @@
+
+#head{
+    background-image:url(../images/cities/ocean.jpg) ;
+    background-size:cover;
+    background-position: center;
+    height: 600px;
+}
+#hero{
+    width: 500px;
+    margin:0 auto ;
+    padding: 40px;
+    position:relative;
+    top:200px;
+    text-align:center;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);  
+    background-color: rgba(0,0,0, 0.5);
+    border-radius:8px;  
+    color:white;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+#hero h1{
+    font-size:40px;
+    color:beige;
+    text-transform:uppercase;
+    text-shadow: 2px 2px 4px;
+    margin:0;
+}
+#hero p {
+    padding:20px;
+    margin:0;
+}
+#hero a{
+    background-color: rgb(246, 235, 84);
+    color:black;
+    padding: 12px 24px;
+    box-shadow:3px 2px 4px;
+    text-decoration: none;
+    border-radius:8px;
+    display: inline-block;
+}
+#hero a:hover{
+    background-color:rgb(246, 200, 54)
+}
+#highlights{
+     text-align: center;
+     background:linear-gradient(45deg, rgb(234, 245, 244), rgb(202, 255, 251));
+     padding:20px;
+}
+#city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#city img{
+    height: 200px;
+    width:250px;
+    object-fit: cover;
+    margin:10px;
+    box-shadow:2px 4px 3px;
+    border-radius:8px;
+}
+#highlights h2{
+    font-size:2em;
+    text-transform: uppercase;
+    color:rgb(12, 33, 40);
+    margin-top:0;
+}
+.highlight p{
+    text-transform: uppercase;
+    color:rgb(12, 33, 40);
+    margin:0;
+}
+.highlight p span{
+    font-size:20px;
+    font-weight: bold;
+    color:rgb(132, 238, 201);
+}

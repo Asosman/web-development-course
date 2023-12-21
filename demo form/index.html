@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" a href="style.css"/>
+</head>
+<body>
+    <h1>Contact us </h1>
+    <form action="mailto:asostar9117@gmail.com" method="">
+        <section>
+            <h2>How can we help you?</h2>
+            <ul>
+                <li>
+                    <label for="username">Your Name</label>
+                    <input type="text" name="user-name" id="username" required/>
+                </li>
+                <li>
+                    <label for="useremail">Your E-Mail Address</label>
+                    <input type="email" name="user-email" id="useremail"/>
+                </li>
+                <li>
+                    <label for="usertel">Telephone Numnber</label>
+                    <input type="tel" name="user-tel" id="usertel" required/>
+                </li>
+                <li>
+                    <label for="your-message">Your Message</label>
+
+                    <textarea name="your-message" id="your-message"></textarea>
+                </li>
+                <li>
+                    <label for="find">How do you find us?</label>
+                    <select id="find">
+                        <option>Instagram</option>
+                        <option>Whatsapp</option>
+                        <option>Facebook</option>
+                    </select>
+                </li>
+            </ul>
+        </section>
+        <sextion>
+            <h2>How can we Contact you?</h2>
+            <ul >
+                <li class="inline-control">
+                    <input type="radio" name="reply" id="call"/>
+                    <label for="call">Call me </label>
+                </li>
+                <li class="inline-control">
+                    <input type="radio" name="reply" id="email"/>
+                    <label for="email">Send me Email</label>
+                </li>
+                <li class="inline-control">
+                    <input type="radio" name="reply" id="don't"/>   
+                    <label for="don't">Don't Reply</label>
+                </li>
+                <li class="inline-control" id="accept">
+                    <input type="checkbox" name="check" id="terms"/>
+                    <label for="terms">Accept Terms</label> </label>
+                </li>
+            </ul>
+        </sextion>
+        <section id="formaction">
+                <button type="submit" id="sub">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+        </section>
+    </form>
+</body>
+</html>

@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: brown;
+}
+.main{
+    
+    display: flex;
+    width: 375px;
+    height: 375px;
+    margin:10px auto;
+    padding:10px;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    font-size:1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    display: block;
+    background-color: rgb(19, 42, 42);
+    color:rgb(43, 36, 170);
+}
+.third{
+    width:75px;
+    background-color: black;
+}
+
+.box{
+    width: 150px; 
+    height:150px;
+    background-color:yellow;
+    border: 1px solid white;
+}
+.read{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border:1px solid black;
+}
+
+.right1, .right2, .right3{
+    display:flex;
+}
+.left1, .left2 , .left3{
+    display:flex;
+}
+
+.up1, .up2 , .up3{
+    display:flex;
+    flex-wrap: wrap;
+}
+.down1, .down2, .down3{
+    display:flex;
+    flex-wrap: wrap;
+}
+.down2 > .read{
+    background-color:white;
+}
+.down2 > .read:nth-child(6){
+    background-color: white;
+}
+.down2 > .read:nth-child(2){
+    background-color: orangered;
+}
+.down2 > .read:nth-child(5){
+    background-color: orangered;
+}
+.down1 > .read:nth-child(5){
+    background-color: orangered;
+}
+.down1 > .read:nth-child(2){
+    background-color: orangered;
+}
+.down3 > .read:nth-child(2){
+    background-color: orangered;
+}
+.down3 > .read:nth-child(1){
+    background-color: orangered;
+}
+.up2 > .read{
+    background-color:white;
+}
+.up2 > .read:nth-child(1){
+    background-color: white;
+}
+.up3 > .read:nth-child(2){
+    background-color: green;
+}
+.up3 > .read:nth-child(5){
+    background-color: green;
+}
+.up2 > .read:nth-child(2){
+    background-color: green;
+}
+.up2 > .read:nth-child(5){
+    background-color: green;
+}
+
+.up1 > .read:nth-child(5){
+    background-color: green;
+}
+.up1 > .read:nth-child(6){
+    background-color: green;
+}
+.left2 > .read:nth-child(1){
+    background-color: white;
+}
+.left2 > .read{
+    background-color: blue;
+}
+.left1 > .read:nth-child(2){
+    background-color:blue;
+} 
+
+.right1 > .reading1{
+    background-color:white;
+}
+.right2 > .reading1 {
+    background-color: rgb(246, 10, 10);
+}
+.right2 > .last1{
+    background-color: white;
+}
+.right3 > .reading1 {
+    background-color: white;
+}
+.right3 > .red{
+    background-color: red;
+}
+    
+.center{
+    width: 75px;
+    height: 75px;
+    background-color: blueviolet;
+}

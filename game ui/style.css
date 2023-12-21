@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: orange;
+}
+h1{
+    text-align:center;
+    color:rgb(202, 208, 94);
+    font-size: 3em;
+    margin: 0;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+main{
+    display:flex;
+    width:500px;
+    flex-wrap: wrap;
+    margin:10px auto;
+    background-color: rgb(47, 34, 12);
+    box-shadow: 4px 5px 10px;
+}
+a{
+    text-align:center;
+    text-decoration: none;
+    font-size:1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    display:block;
+    background-color: black;
+}
+div {
+    width: 50px;
+    height: 50px;
+    border:1px solid white;
+}
+.dg{
+    background-color: red;
+}
+.red{
+    background-color: rgb(91, 22, 22);
+}
+.yellow{
+    background-color: yellow;
+}

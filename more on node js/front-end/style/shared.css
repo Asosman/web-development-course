@@ -1,0 +1,143 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+html{
+    background-color:rgb(250, 224, 195) ;
+    position:relative;
+}
+.logo{
+    display:inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin:2rem 0 0 4rem;
+
+}
+.logo a{
+    background-color:rgb(240,169,9);
+    padding:1rem 2.5rem;
+    color:white;
+    border-radius:50%;
+    text-decoration: none;
+}
+.nav-bar{
+    position:absolute;
+    right:1rem;
+    top:2rem;
+}
+.nav-bar ul{
+    list-style-type: none;
+   display:flex;
+   justify-content: space-between;
+   
+}    
+.nav-bar ul li a{
+    font-size: 1.2rem;
+    color:rgb(202, 145, 10);
+    text-decoration:none;
+    font-weight: bold;
+    padding:0.5rem 0.8rem;
+}
+.nav-bar ul li:hover a {
+    color:rgb(221, 157, 8);
+    background-color:rgba(163, 123, 29, 0.2);
+    border-radius: 1rem;
+}
+
+.mobile-icon{
+    display:none;
+    width:4rem;
+    height:4rem;
+    position:absolute;
+    right:1rem;
+    top:1rem;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.mobile-icon span{
+    border:3px solid rgb(226, 226, 211);
+    margin: 2px;
+    width:90%;
+}
+.side-drawer{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:3rem;
+    height: 100vh;
+    width:100vw;
+    text-align:center;
+    background-color:rgb(23, 23, 21);
+    margin:0;
+    display:none;
+    justify-content: center;
+    /* align-items: center; */
+}
+.side-drawer ul{
+    margin-top: 2rem;
+    text-align: center;
+}
+.side-drawer ul li{
+    padding: 1rem 1.5rem;
+}
+.side-drawer ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    color:white;
+    margin:2rem;
+}
+.side-drawer ul li a:hover{
+    font-size: 2rem;
+    text-decoration: none;
+    color:white;
+    background-color: rgba(163, 123, 29, 0.1);
+}
+main{
+    width:95%;
+    max-width: 50rem;
+    margin:3rem auto;
+    text-align:center;
+}
+main h1{
+    font-weight: bold;
+    color:rgb(224, 160, 12);
+    font-size: 3rem;
+    padding:1rem;
+}
+main p{
+    font-weight: bold;
+    color:rgb(31, 30, 28);
+    font-size: 1.3rem;
+    padding:1rem;
+}
+button{
+    background-color: rgb(192, 144, 82);
+    padding:0.5rem 0.5rem;
+    border:none;
+    color:white;
+    letter-spacing: 0.1rem;
+    border-radius:0.3rem;
+    cursor:pointer;
+}
+button:hover{
+    background-color: rgb(186, 154, 113);
+}
+@media all and (max-width:860px){
+    .mobile-icon{
+        display:flex;
+        /* display:none; */
+     }   
+     .nav-bar{
+        display:none;
+     }
+     .open{
+        display:flex;
+     }
+}

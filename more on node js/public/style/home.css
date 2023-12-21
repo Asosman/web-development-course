@@ -1,0 +1,47 @@
+main{
+    width:95%;
+    max-width: 50rem;
+    margin:3rem auto;
+    text-align:center;
+}
+main h1{
+    font-weight: bold;
+    color:rgb(224, 160, 12);
+    font-size: 3rem;
+    padding:1rem;
+}
+main p{
+    font-weight: bold;
+    color:rgb(31, 30, 28);
+    font-size: 1.3rem;
+    padding:1rem;
+}
+main ul {
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+}
+main ul li{
+    padding:4rem 2rem;
+    background-color:rgb(35, 34, 32);
+    cursor:pointer;
+}
+main ul li:hover{
+    background-color:rgb(58, 57, 53);
+}
+main ul li a{
+    font-size:1.3rem;
+    color:white;
+    text-decoration:none;
+    letter-spacing: .1rem;
+}
+@media all and (max-width:700px){
+    main ul {
+        flex-direction: column;
+    }
+    main ul li{
+        margin-bottom: 2rem;
+    }
+}

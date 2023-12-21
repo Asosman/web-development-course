@@ -1,0 +1,43 @@
+form{
+    background-color:rgb(236, 219, 169);
+    width:60%;
+    padding:1rem;
+    margIn:auto;
+    text-align: left;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    position: relative;
+}
+.form-control{
+    width:100%;
+}
+form .form-control label{
+    display:block;
+    font-size:1.3rem;
+    font-weight: bolder;
+    color:rgb(61, 57, 52);
+    margin:0.6rem 0 0  0;
+}
+form .form-control input{
+   width:100%;
+   padding:0.5rem;
+   border:0.5px solid rgb(222, 200, 136); 
+   border-radius: 0.2rem;
+   font-size: 1.3rem;
+}
+form .form-control input:focus{
+    border:none;
+ }
+ textarea{
+     min-height: 6rem;
+     width:100%;
+     margin-bottom: 0.5rem;
+     font-size: 1.3rem;
+     padding:0.4rem 0.5rem;
+ }
+.submit-botton{
+    text-align: left;
+    width: 100%;
+}

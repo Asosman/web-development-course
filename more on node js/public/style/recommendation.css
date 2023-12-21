@@ -1,0 +1,50 @@
+main{
+ 
+ 
+}
+#hotel-detail{
+    background-color: rgb(247, 207, 153);
+    margin:2rem auto;   
+     padding:1rem 1rem;
+    text-align: left;
+    width:75%;
+    box-shadow:0 1rem 1rem rgb(105, 104, 102);
+}
+#hotel-name{
+    font-weight:bolder;
+    margin-bottom:0.4rem;
+}
+#hotel-description{
+    margin-top: 0.4rem;
+    padding:0;
+}
+#hotel-button{
+    display:flex;
+    justify-content: flex-end;
+    margin-top:0.4rem;
+}
+
+
+#web-link a{
+    text-decoration: none;
+    display:block;
+    background-color: rgb(192, 144, 82);
+    padding:0.5rem 0.5rem;
+    border:none;
+    color:white;
+    letter-spacing: 0.1rem;
+    border-radius:0.3rem;
+    cursor:pointer;
+    /* display:flex; */
+    text-align:center;
+}
+#web-link a:hover{
+    background-color: rgb(186, 154, 113);
+}
+#hotel-country, #hotel-address{
+    color:rgb(105, 104, 102);
+    padding:0.3rem;
+    font-size: 1rem;
+}
+
+

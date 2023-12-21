@@ -1,0 +1,29 @@
+form{
+    background-color:rgb(236, 219, 169);
+    width:60%;
+    padding:1rem;
+    margIn:auto;
+    text-align: left;
+}
+form .form-control label{
+    display:block;
+    font-size:1.3rem;
+    font-weight: bolder;
+    color:rgb(61, 57, 52);
+    margin:0.6rem 0 0  0;
+}
+form .form-control input{
+   width:95%;
+   padding:0.3rem;
+   border:0.5px solid rgb(222, 200, 136); 
+   border-radius: 0.2rem;
+}
+form .form-control input:focus{
+    border:none;
+ }
+ textarea{
+     min-height: 6rem;
+     width:95%;
+     margin-bottom: 0.5rem;
+ }
+ 

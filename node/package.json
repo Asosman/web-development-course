@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Getting Started with Node and Exprees js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ochiman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "js": "^0.1.0",
+    "more": "^0.1.6",
+    "node": "^20.2.0",
+    "on": "^1.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(196, 184, 184);
+   
+}
+h1{
+    text-align: center;
+}
+form{
+    width: 400px;
+    margin:auto;
+    background-color: rgb(229, 234, 239);
+    padding:1rem;
+    border: 1px solid rgb(60, 59, 61);
+    border-radius:5px;
+}
+section{
+    margin-bottom:1rem;
+}
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+label{
+    display:block;
+    color:rgb(48, 50, 51);
+    margin:0.5rem 0;
+}
+textarea{
+    resize: none;
+}
+input,textarea, select{
+    width:100%;
+    display:block;
+    border: 1px solid rgb(164, 164, 177);
+    color:rgb(61, 63, 65);  
+    padding: 0.3rem;
+}
+input:focus,textarea:focus{
+    background-color: rgb(204, 186, 240);  
+}
+.inline-control{
+  display:flex;
+  align-items: center;
+}
+.inline-control input{
+    width:auto;
+}
+.inline-control label{
+margin:0;
+}
+#accept{
+    margin-top: 0.5rem;
+}
+button{
+    padding:0.5rem 1rem;
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+}
+#sub{
+    background-color:rgb(120, 59, 190);
+    color:white;
+}
+#reset{
+    background-color:white;
+    color:rgb(120, 59, 190);
+}
+#reset:hover{
+    background-color:rgb(226, 217, 217);
+    color:rgb(92, 52, 137);
+}
+#sub:hover{
+    background-color:rgb(82, 39, 131);
+    color:white;
+}
+#formaction{
+    text-align:right;
+}
+
