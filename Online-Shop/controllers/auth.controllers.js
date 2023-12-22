@@ -1,8 +1,8 @@
 function getSignUp(req, res){
-    res.send('my conections test')
+    res.render('customer/auth/signup');
 }
 function getLogIn(req, res){
-  res.send('conections are ready')
+    res.render('customer/auth/login');
 }
 
 module.exports = {
