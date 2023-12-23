@@ -7,7 +7,16 @@
 <main>
     <h1>Log In</h1>
     <form action="" method="">
-
+        <p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required> 
+        </p>
+        <p>
+            <label for="passward">Passward</label>
+            <input type="password" id="passward" name="passward" minlength= "6" required> 
+        </p>
+        <button class="btn">log in</button>
+        <p id="sitch-form"><a href="/signup">SignUp Instead</a></p>
     </form>
 </main>
 <%- include('../includes/footer')  %>
