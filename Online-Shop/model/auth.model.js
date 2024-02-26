@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const db = require('../data/database');
 
 class User{
-    constructor(name,email,passward,street,postalCode,city){
+    constructor(email,passward,name,street,postalCode,city){
         this.name = name,
         this.email = email,
         this.passward = passward,
@@ -13,6 +13,15 @@ class User{
             postalCode:postalCode,
             city:city
         } 
+    }
+  
+    passwardAreEqaul(hashedPassward){
+        return bcrypt.compare(this.passward,hashedPassward);
+    }
+
+
+    getUserWithThesameEmail(){
+        return db.getDb().collection('user').findOne({email:this.email})
     }
 
 
@@ -24,8 +33,8 @@ class User{
             passward:hashedPassward,
             address:{...this.address}
         })
-
     }
+
 
 }
 
