@@ -5,7 +5,7 @@ function createSessionStore(){
     const mongoDbStore = mongodbStore(session)
     const store = mongoDbStore({
         URI: 'mongodb://localhost:27017',
-        databaseName:'Online-Shop',
+        databaseName:'online-shop',
         collection:'session'
     })
     return store;

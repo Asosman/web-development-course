@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs');
+
 
 const db = require('../data/database');
 
@@ -6,7 +8,7 @@ class User{
         this.name = name,
         this.email = email,
         this.passward = passward,
-        address = {
+        this.address = {
             street:street,
             postalCode:postalCode,
             city:city
@@ -15,17 +17,17 @@ class User{
 
 
     async signup(){
-        const hashedPassward = a
+        const hashedPassward = await bcrypt.hash(this.passward,12);
+        const result = await db.getDb().collection('user').insertOne({
+            name:this.name,
+            email:this.email,
+            passward:hashedPassward,
+            address:{...this.address}
+        })
 
     }
 
 }
-
-
-
-
-
-
 
 
 module.exports = User;
