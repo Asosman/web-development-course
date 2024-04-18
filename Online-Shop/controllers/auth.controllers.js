@@ -42,7 +42,7 @@ async function signup(req, res) {
                 ...inputData
             },
             function(){
-                res.redirect('/signup')
+                res.redirect('/signup');
             }
             )
         return;
@@ -73,7 +73,7 @@ async function signup(req, res) {
 
 function getLogIn(req, res) {
     let sessionData = sessionFlash.getSessionData(req);
-    console.log(sessionData)
+    // console.log(sessionData)
     if(!sessionData){
       sessionData = {
           email:'',
