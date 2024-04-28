@@ -14,6 +14,7 @@ const sessionConfig = require('./config/sessionConfig')
 const authRoutes = require('./routes/auth.route');
 const productsRoutes = require('./routes/products.route');
 const baseRoutes = require('./routes/base.route');
+const adminRoutes = require('./routes/admin.route');
 
 
 const app = express();
@@ -34,6 +35,7 @@ app.use(checkLoginStatusMiddleware);
 app.use(baseRoutes);
 app.use(authRoutes);
 app.use(productsRoutes);
+app.use('/admin',adminRoutes);
 
 app.use(errorHandler);  
 
