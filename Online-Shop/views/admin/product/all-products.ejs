@@ -1,18 +1,27 @@
 <%-include('../../shared/includes/head',{pageTitle :'admin-products'}) %>
+<link rel="stylesheet" href="/styles/products.css">
 </head>
+
 
 <body>
 <%-include('../../shared/includes/header') %>
 <main>
-    <h1>all products (Admin)</h1>
+    <h1>all products</h1>
     <section>
         <h2>Product Management</h2>
         <p>
-            <a href="/admin/products/new" class="btn">Manage Products</a>
+            <a href="/admin/products/new" class="btn">Add Product</a>
         </p>
     </section>
     <section>
-        <p>list of all products.....</p>
+
+        <ul id="product-grid">
+          <% for ( const product of products){%>
+            <li>
+              <%-include('../../shared/includes/product-item',{product:product})%>
+            </li>
+          <%}%>
+        </ul>
 
     </section>
    

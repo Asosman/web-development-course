@@ -1,16 +1,80 @@
-function getProducts(req ,res){
-    res.render('admin/product/all-products')
+const Product = require('../model/product.model');
+
+async function getProducts(req ,res, next){
+    try{
+        const products = await Product.findAll();
+        // console.log(products)
+        res.render('admin/product/all-products',{products:products})
+    }catch(error){
+        next(error)
+        return;
+    }
 }
 
 function getNewProducts(req,res){
-    res.render('admin/product/new-product');
+    const product = {
+        title:'',
+        summary: '',
+        price:'',
+        description:''
+    }
+
+    res.render('admin/product/new-product',{product:product});
 }
 
-function createNewProducts(req, res){
+async function createNewProducts(req, res, next){
+    const productData = {
+        ...req.body,
+        image:req.file.filename
+    }
+
+    const product = new Product(productData);
+
+    try{
+        const result = await product.save();
+    }catch(error){
+        next(error);
+        return;
+    }
+
+    res.redirect('/admin/products');
+}
+
+ async function getUpdateProduct(req, res, next){
+
+   let product;
+    try{
+         product = await Product.findById(req.params.id);
+    }catch(error){
+        next(error);
+    }
+
+    res.render('admin/product/update-product',{product:product});
+}
+
+ async function updateProduct(req, res, next){
+    const product = new Product(
+        {
+            ...req.body,
+            _id: req.params.id
+        }
+    )
+
+    if(req.file){
+        product.replaceImage(req.file.filename);
+    }
+    try{
+        const result = await product.save()
+    }catch(error){
+        next(error);
+    }
+    res.redirect('/admin/products');
 }
 
 module.exports = {
     getProducts : getProducts,
     getNewProducts: getNewProducts,
-    createNewProducts: createNewProducts
+    createNewProducts: createNewProducts,
+    getUpdateProduct:getUpdateProduct,
+    updateProduct:updateProduct
 }

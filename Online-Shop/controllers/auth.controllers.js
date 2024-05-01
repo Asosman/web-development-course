@@ -124,6 +124,7 @@ async function login(req, res) {
 
     authSession.createUserSession(req, existingUser, function () {
         console.log('inside the function')
+    
         res.redirect('/');
     })
     // res.redirect('/signup');
