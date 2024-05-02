@@ -36,10 +36,10 @@ class Product {
             error.code = 404;
         }
 
-        return product;
+        return new Product(product);
     }
-    
-    replaceImage(image){
+
+    replaceImage(image) {
         this.image = image;
         this.updateImageUrl(this.image);
     }
@@ -53,16 +53,16 @@ class Product {
             image: this.image
         }
 
-        if(!productDoc.image){
+        if (!productDoc.image) {
             delete productDoc.image;
         }
+
+
         let result;
         if (this.id) {
             const prodId = new ObjectId(this.id)
             result = await db.getDb().collection('product').updateOne({ _id: prodId }, {
-                projection: {
-                    $set: productDoc
-                }
+                $set: productDoc
             })
         } else {
             result = await db.getDb().collection('product').insertOne(productDoc);
@@ -70,11 +70,14 @@ class Product {
     }
 
 
-
-
     updateImageUrl(newImage) {
         this.imagePath = `productData/images${newImage}`;
         this.imageUrl = `/assets/product/images/${newImage}`;
+    }
+
+    removeProduct(){
+        const productId = new ObjectId(this.id);
+        return db.getDb().collection('product').deleteOne({_id:productId})
     }
 }
 

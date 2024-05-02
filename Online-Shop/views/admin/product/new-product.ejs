@@ -1,5 +1,6 @@
 <%-include('../../shared/includes/head',{pageTitle :'Create New Product'}) %>
 <link rel="stylesheet" href="/styles/form.css">
+<script src="/script/image-preview.js" defer></script>
 </head>
 
 <body>
@@ -7,7 +8,7 @@
 <main>
     <h1>Create New Product</h1>
 
-    <%-include('includes/product-form',{sumbitPath:'/admin/products', product:product,  imageRequired:'true'}) %>
+    <%-include('includes/product-form',{sumbitPath:'/admin/products', product:product,  imageRequired:true}) %>
     
 </main>
 <%-include('../../shared/includes/footer')  %></body>

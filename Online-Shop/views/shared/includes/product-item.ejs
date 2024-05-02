@@ -5,7 +5,7 @@
     <div class="product-item__actions">
         <% if(locals.isAdmin){ %>
         <a class="btn btn-alt" href="/admin/products/<%= product.id %>">View & Edit</a>
-        <button class="btn btn-alt">Delete</button>
+        <button class="btn btn-alt"  data-csrf="<%=locals.csrfToken %>" data-id="<%=product.id %>"> Delete</button>
         <% } %>
 
         <% if(!locals.isAdmin){ %>

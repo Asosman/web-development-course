@@ -1,11 +1,10 @@
 const express = require('express');
+const productControllers = require('../controllers/products.controllers')
 
 const router = express.Router();
 
 
-router.get('/products',function(req, res){
-    res.render('customer/product/all-products');
-})
+router.get('/products',productControllers.getProducts)
 
 
 

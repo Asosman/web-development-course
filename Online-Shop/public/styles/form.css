@@ -7,7 +7,6 @@ label{
     color:var(--color-gray-100);
     display: block;
     margin-bottom: var(--space-2);
-
 }
 
 input,
@@ -18,4 +17,22 @@ textarea{
     border:none;
     width: 90%;
     outline: none;
+}
+
+#image-control{
+    display:flex;
+    /* align-items: center; */
+}
+
+#image-control input{
+    max-width: 15rem;
+    align-self:center;
+}
+
+#image-control img{
+    display:none;
+    width:4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius:var(--border-radius-small);
 }

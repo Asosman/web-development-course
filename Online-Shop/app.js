@@ -10,6 +10,7 @@ const sessionConfig = require('./config/sessionConfig')
 const csrfToken = require('./middlewares/csrfTokenMiddleware');
 const errorHandlerMiddlewares = require('./middlewares/error-handling');
 const checkLoginStatusMiddleware = require('./middlewares/check-login')
+const protectRouteMiddleWare = require('./middlewares/protectRoute')
 // const imageUploadMiddlewares = require('./middlewares/file-uploads')
 
 const authRoutes = require('./routes/auth.route');
@@ -28,6 +29,7 @@ app.use(express.static('public'));
 app.use('/assets/product/',express.static('product-data'))
 app.use(express.urlencoded({extended:false}));
 
+
 app.use(session(sessionConfig()))
 
 app.use(csrf());
@@ -38,6 +40,7 @@ app.use(checkLoginStatusMiddleware);
 app.use(baseRoutes);
 app.use(authRoutes);
 app.use(productsRoutes);
+app.use(protectRouteMiddleWare);
 app.use('/admin',adminRoutes);
 
 app.use(errorHandlerMiddlewares);  
