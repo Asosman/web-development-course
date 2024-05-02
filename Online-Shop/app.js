@@ -35,7 +35,6 @@ app.use(session(sessionConfig()))
 app.use(csrf());
 app.use(csrfToken);
 app.use(checkLoginStatusMiddleware);
-// app.use(imageUploadMiddlewares);
 
 app.use(baseRoutes);
 app.use(authRoutes);
