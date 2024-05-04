@@ -100,6 +100,12 @@
     background-color: var(--color-gray-100);
 }
 
+.badge{
+    background-color: var(--color-primary-500);
+    padding:var(--space-2);
+    border-radius:4rem;
+}
+
 
 
 @media(min-width:48rem) {
@@ -110,10 +116,10 @@
     #mobile-nav__menu {
         display: none;
     }
-
+   
     #mobile-menu {
-        display: none;
-       
+        display: none !important;
+        
     }
 
     #nav-items {
