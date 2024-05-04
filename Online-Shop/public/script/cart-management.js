@@ -37,5 +37,6 @@ newTotalQuantityMainElement.innerText = responseData.totalQuantity;
 
 }
 
-
-addToCartbtnElement.addEventListener('click', addToCart);
+if(addToCartbtnElement){
+    addToCartbtnElement.addEventListener('click', addToCart);
+}

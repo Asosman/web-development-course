@@ -1,3 +1,4 @@
+const { get } = require('lodash');
 const Product = require('../model/product.model')
 async function addToCart(req, res, next){
     let product;
@@ -18,6 +19,12 @@ async function addToCart(req, res, next){
     })
 }
 
+
+function getCartItems(req, res){
+  res.render('customer/cart/cart');
+}
+
 module.exports = {
-  addToCart: addToCart
+  addToCart: addToCart,
+  getCartItems:getCartItems
 } 

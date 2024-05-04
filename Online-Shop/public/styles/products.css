@@ -30,6 +30,7 @@
     display: flex;
     gap:var(--space-4);
     justify-content:center;
+    
 }
 
 
@@ -38,6 +39,7 @@
     padding:var(--space-8);
     background-color: var(--color-gray-600);
     gap:var(--space-4);
+    
 }
 
 #product-details img{
@@ -62,6 +64,7 @@
 @media (min-width:48rem){
     #product-details header{
         display:flex;
+        
     }
 
     #product-details img{
